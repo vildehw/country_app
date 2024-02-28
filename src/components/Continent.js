@@ -1,11 +1,14 @@
+import africa from '../svg/africa.svg'
+
 export default function Continent({continents, setContinents}){
 
+    setContinents("africa.svg")
     
-    function fetchCountry (svgFilePath){ 
+    function fetchCountry (continents){ 
 
     
         // Fetch SVG content
-        fetch(svgFilePath)
+        fetch(continents)
         .then(response => response.text())
         .then(svgText => {
             // Inject SVG into the specified container
@@ -22,7 +25,8 @@ export default function Continent({continents, setContinents}){
     return(
         <>
         <button onclick={fetchCountry('africa.svg')}>Afrika</button> 
-        <div id="svgContainer"></div>
+        <div id="svgContainer"></div> 
+        <img src="/svg/africa.svg"/>
         </>
     )
 }

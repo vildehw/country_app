@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import './App.css';
-import Continent from './components/Continent.js';
+import Continent from './components/Continent';
 
 
 function App() { 
